@@ -33,11 +33,30 @@
                     <button
                         class="bg-gray-400 text-white rounded py-2 px-4 hover:bg-gray-500"
                         @click="on = true"
-                    >Episode 5: Modal
+                    >
+                        Episode 5: Modal
                     </button>
                 </x-slot>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eius eos molestiae nesciunt nulla saepe sint, vero? Blanditiis, culpa eligendi facilis fuga laboriosam maiores neque non suscipit tempore veritatis voluptas!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eius eos molestiae nesciunt nulla
+                saepe sint, vero? Blanditiis, culpa eligendi facilis fuga laboriosam maiores neque non suscipit tempore
+                veritatis voluptas!
             </x-modal>
+            <div class="mb-4"></div>
+            <x-section>
+                <x-dropdown>
+                    <x-slot name="trigger">
+                        <button
+                            class="bg-gray-400 text-white rounded py-2 px-4 hover:bg-gray-500"
+                        >
+                            Episode 6: Dropdown
+                        </button>
+                    </x-slot>
+
+                    <a class="block px-4 py-1 hover:bg-gray-500 text-sm" href="/">One</a>
+                    <a class="block px-4 py-1 hover:bg-gray-500 text-sm" href="/">Two</a>
+                    <a class="block px-4 py-1 hover:bg-gray-500 text-sm" href="/">Three</a>
+                </x-dropdown>
+            </x-section>
         </div>
     </div>
 </x-layout>
