@@ -24,16 +24,9 @@
             </div>
         </x-form>
 
-        <x-form method="delete" action="/comments/{{ $comment->id }}">
-            <div>
-                <button
-                    type="submit"
-                    class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
-                >
-                    Delete
-                </button>
-            </div>
-        </x-form>
+        <x-form-button method="delete" action="/comments/{{ $comment->id }}">
+            Delete
+        </x-form-button>
     </x-section>
 </x-layout>
 
