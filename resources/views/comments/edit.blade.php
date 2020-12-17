@@ -24,9 +24,7 @@
             </div>
         </x-form>
 
-        <form method="post" action="/comments/{{ $comment->id }}">
-            @csrf
-            @method('delete')
+        <x-form method="delete" action="/comments/{{ $comment->id }}">
             <div>
                 <button
                     type="submit"
@@ -35,7 +33,7 @@
                     Delete
                 </button>
             </div>
-        </form>
+        </x-form>
     </x-section>
 </x-layout>
 
