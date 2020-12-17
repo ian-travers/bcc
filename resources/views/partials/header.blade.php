@@ -2,31 +2,10 @@
     <h1 class="font-bold tracking-widest uppercase">Laracasts</h1>
 
     <nav>
-        <a
-            class="px-6 hover:underline hover:text-blue-300 {{ request()->is('/') ? 'underline text-blue-300' : '' }}"
-            href="{{ route('home') }}"
-
-        >
-            Home
-        </a>
-        <a
-            class="px-6 hover:underline hover:text-blue-300 {{ request()->is('about') ? 'underline text-blue-300' : '' }}"
-            href="{{ route('about') }}"
-        >
-            About
-        </a>
-        <a
-            class="px-6 hover:underline hover:text-blue-300" {{ request()->is('testimonials') ? 'underline text-blue-300' : '' }}
-            href="{{ route('testimonials') }}"
-        >
-            Testimonials
-        </a>
-        <a
-            class="px-6 hover:underline hover:text-blue-300 {{ request()->is('contact') ? 'underline text-blue-300' : '' }}"
-            href="{{ route('contact') }}"
-        >
-            Contact
-        </a>
+        <x-nav-link route="home">Home</x-nav-link>
+        <x-nav-link route="about">About</x-nav-link>
+        <x-nav-link route="testimonials">Testimonials</x-nav-link>
+        <x-nav-link route="contact">Contact</x-nav-link>
     </nav>
 
     <x-dropdown alignment="right">
