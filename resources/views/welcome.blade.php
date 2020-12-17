@@ -52,9 +52,9 @@
                         </button>
                     </x-slot>
 
-                    <a class="block px-4 py-1 hover:bg-gray-500 text-sm" href="/">One</a>
-                    <a class="block px-4 py-1 hover:bg-gray-500 text-sm" href="/">Two</a>
-                    <a class="block px-4 py-1 hover:bg-gray-500 text-sm" href="/">Three</a>
+                    <x-dropdown-link href="/">One</x-dropdown-link>
+                    <x-dropdown-link href="/">Two</x-dropdown-link>
+                    <x-dropdown-link href="/">Three</x-dropdown-link>
                 </x-dropdown>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, assumenda consequuntur mollitia unde voluptatem? Animi commodi consectetur, cumque ea, error est impedit, maiores maxime molestiae nisi provident sit unde.
             </x-section>
