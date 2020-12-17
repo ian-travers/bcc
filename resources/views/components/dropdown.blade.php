@@ -1,9 +1,18 @@
-<div x-data="{ open: false }" @click.away="open = false">
+@props(['alignment' => 'left'])
+
+@php
+    $alignmentClasses = [
+        'left' => 'left-0',
+        'right' => 'right-0'
+    ];
+@endphp
+
+<div class="relative" x-data="{ open: false }" @click.away="open = false">
     <span @click="open = !open">
         {{ $trigger }}
     </span>
     <div
-        class="absolute z-20 bg-white rounded shadow-md mt-1 py-2 w-40"
+        class="{{ $alignmentClasses[$alignment] }} absolute z-20 bg-white rounded shadow-md mt-1 py-2 w-40"
         x-show="open"
         x-transition:enter="transition transform duration-300"
         x-transition:enter-start="opacity-0 scale-50"
