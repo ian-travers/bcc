@@ -10,4 +10,8 @@
     <x-flash type="error">
         Whoops ...
     </x-flash>
+
+    <x-flash type="warning">
+        Some ...
+    </x-flash>
 </x-layout>

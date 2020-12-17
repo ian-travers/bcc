@@ -1,8 +1,13 @@
 @props([
-    'type' => 'success'
+    'type' => 'success',
+    'colors' => [
+        'success' => 'bg-green-200',
+        'error' => 'bg-red-200',
+        'warning' => 'bg-orange-200',
+    ]
 ])
 
-<section class="{{ $type === 'success' ? 'bg-green-200' : 'bg-red-200' }} p-4">
+<section class="{{ $colors[$type] }} p-4">
     <div class="flex justify-between">
         <p>{{ $slot }}</p>
         <button>&times;</button>
