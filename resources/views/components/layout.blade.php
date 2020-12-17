@@ -10,6 +10,7 @@
 
 </head>
 <body>
+@include('partials/header')
 {{ $slot }}
 <script src="{{ mix('js/app.js', 'build') }}"></script>
 </body>
