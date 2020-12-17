@@ -3,7 +3,7 @@
         Hello
     </x-section>
 
-    <x-section>
-        Hello again
-    </x-section>
+    <x-flash>
+        You are logged in
+    </x-flash>
 </x-layout>
