@@ -18,9 +18,11 @@
             </x-flash>
         </div>
         <div class="flex-auto p-4">
-            <a class="bg-gray-400 text-white rounded py-2 px-4 hover:bg-gray-500" href="/comments/1/edit">
-                Episode 3 + 4: Form && Form Button
-            </a>
+            <div class="mb-5">
+                <a class="bg-gray-400 text-white rounded py-2 px-4 hover:bg-gray-500" href="/comments/1/edit">
+                    Episode 3 + 4: Form && Form Button
+                </a>
+            </div>
 
             <x-modal
                 title="Deactivate your account?"
@@ -28,7 +30,11 @@
                 cancel-label="Not now"
             >
                 <x-slot name="trigger">
-                    <button @click="on = true">Episode 5: Modal</button>
+                    <button
+                        class="bg-gray-400 text-white rounded py-2 px-4 hover:bg-gray-500"
+                        @click="on = true"
+                    >Episode 5: Modal
+                    </button>
                 </x-slot>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eius eos molestiae nesciunt nulla saepe sint, vero? Blanditiis, culpa eligendi facilis fuga laboriosam maiores neque non suscipit tempore veritatis voluptas!
             </x-modal>
