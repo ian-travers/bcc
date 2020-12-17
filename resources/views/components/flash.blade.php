@@ -7,7 +7,7 @@
     ]
 ])
 
-<section class="{{ $colors[$type] }} p-4">
+<section {{ $attributes->merge(['class' => "{$colors[$type]} p-4"]) }}>
     <div class="flex justify-between">
         <p>{{ $slot }}</p>
         <button>&times;</button>
