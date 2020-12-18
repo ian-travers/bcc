@@ -3,15 +3,28 @@
 <div
     x-data="{
         activeTab: '{{ $active }}',
+        tabs: [],
         tabHeadings: [],
+        toggleTabs() {
+            this.tabs.forEach(
+                tab => tab.__x.$data.show = tab.__x.$data.name === this.activeTab
+            );
+        },
     }"
     x-init="() => {
-        tabHeadings = [...$refs.tabs.children].map(tab => tab.__x.$data.name);
+        tabs = [...$refs.tabs.children];
+        tabHeadings = tabs.map(tab => tab.__x.$data.name);
+        toggleTabs();
     }"
 >
-    <div class="">
+    <div class="mb-3">
         <template x-for="(tab, index) in tabHeadings" :key="index">
-            <button x-text="tab" @click="activeTab = tab"></button>
+            <button
+                class="px-4 py-1 text-sm hover:bg-blue-500 hover:text-white rounded"
+                :class = "tab === activeTab ? 'bg-blue-500 text-white' : ''"
+                x-text="tab"
+                @click="activeTab = tab; toggleTabs()"
+            ></button>
         </template>
     </div>
     <div x-ref="tabs">

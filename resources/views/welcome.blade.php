@@ -64,7 +64,7 @@
             </x-section>
 
             <p>Episode 9: Tabs</p>
-            <x-tabs active="Second">
+            <x-tabs active="First">
                 <x-tab name="First">First tab content goes here</x-tab>
                 <x-tab name="Second">Second tab content goes here</x-tab>
                 <x-tab name="Third">Third tab content goes here</x-tab>
