@@ -24,6 +24,8 @@
                 :class = "tab === activeTab ? 'bg-blue-500 text-white' : ''"
                 x-text="tab"
                 @click="activeTab = tab; toggleTabs()"
+                role="tab"
+                :aria-selected="tab === activeTab"
             ></button>
         </template>
     </div>
