@@ -28,7 +28,12 @@ Route::get('/comments/create', function () {
 })->name('comment.create');
 
 Route::post('/comments', function () {
-    dd(request()->all());
+    request()->validate([
+        'body' => 'required',
+        'g-recaptcha-response' => ['required', new \App\Rules\Recaptcha()]
+    ]);
+
+    dd('Validation passed and we are ready to create the comment');
 });
 
 Route::get('/comments/{comment}/edit', function (Comment $comment) {
