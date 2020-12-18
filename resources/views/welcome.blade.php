@@ -71,4 +71,14 @@
             </x-tabs>
         </div>
     </div>
+
+    <div class="px-8 my-4">
+        <p class="mb-3">Episode 11: Google reCaptcha v.2. Click the button below to see a form with the reCaptcha. Надо кликнуть кнопку ниже.</p>
+        <a
+            class="bg-green-400 text-white rounded py-2 px-4 hover:bg-green-500"
+            href="{{ route('comment.create') }}"
+        >
+            Create a comment
+        </a>
+    </div>
 </x-layout>

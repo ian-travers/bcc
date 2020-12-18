@@ -23,6 +23,14 @@ Route::get('/contact-team', function () {
     return view('welcome');
 });
 
+Route::get('/comments/create', function () {
+    return view('comments.create');
+})->name('comment.create');
+
+Route::post('/comments', function () {
+    dd(request()->all());
+});
+
 Route::get('/comments/{comment}/edit', function (Comment $comment) {
     return view('comments.edit', ['comment' => $comment]);
 });
