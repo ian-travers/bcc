@@ -8,12 +8,7 @@
 
     <link href="{{ mix('css/app.css', 'build') }}" rel="stylesheet">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        function onSubmit(token) {
-            document.querySelector("form").submit();
-        }
-    </script>
+    @stack('scripts')
 </head>
 <body>
 @include('partials/header')
