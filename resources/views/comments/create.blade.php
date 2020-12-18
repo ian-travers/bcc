@@ -5,7 +5,9 @@
             method="post"
             action="/comments"
             x-data
-            @submit.prevent="$dispatch('recaptcha')">
+            @submit.prevent="$dispatch('recaptcha')"
+            @recaptcha-complete.window="$el.submit()"
+        >
             @csrf
             <div class="mb-6">
                 <label class="block mb-2 uppercase font-bold text-gray-700" for="body">Body</label>

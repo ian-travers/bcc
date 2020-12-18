@@ -28,6 +28,9 @@
                 },
                 onComplete() {
                     this.$el.closest('form').submit();
+                    this.$el.dispatchEvent(
+                        new CustomEvent('recaptcha-complete', {bubbles: true})
+                    );
                 },
             }
         }
