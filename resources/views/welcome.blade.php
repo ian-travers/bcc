@@ -60,7 +60,20 @@
                 </div>
 
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, assumenda consequuntur mollitia unde voluptatem? Animi commodi consectetur, cumque ea, error est impedit, maiores maxime molestiae nisi provident sit unde.
+
             </x-section>
+
+            <p>Episode 9: Tabs</p>
+            <div x-data="{ active: 'First' }">
+                <div>
+                    <button @click="active = 'First'">First</button>
+                    <button @click="active = 'Second'">Second</button>
+                    <button @click="active = 'Third'">Third</button>
+                </div>
+                <div x-show="active === 'First'" class="">First tab content goes here</div>
+                <div x-show="active === 'Second'" class="">Second tab content goes here</div>
+                <div x-show="active === 'Third'" class="">Third tab content goes here</div>
+            </div>
         </div>
     </div>
 </x-layout>
